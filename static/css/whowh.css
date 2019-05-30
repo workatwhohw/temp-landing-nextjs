@@ -233,11 +233,14 @@ body {
   overflow-x: hidden;
   font-weight: 300;
   width: 100% !important;
-  background: #f7f8fc;
+  background: #faefdb;
   color: #4f4f4f;
   font-family: "Catamaran", sans-serif;
   font-weight: 400;
   font-size: 15px;
+}
+body .ant-layout {
+  background: none;
 }
 
 h1,

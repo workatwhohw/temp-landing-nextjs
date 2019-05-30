@@ -50,10 +50,14 @@ body {
   overflow-x: hidden;
   font-weight: 300;
   width: 100% $imp;
-  background: c(bg);
+  background: c(sand);
   color: c(text);
   @include font(p);
   font-size: 15px;
+
+  .ant-layout {
+    background: none;
+  }
 }
 
 h1,

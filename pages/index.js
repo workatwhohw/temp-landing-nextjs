@@ -47,14 +47,42 @@ class Home extends React.Component {
           <meta name="twitter:site" content="@WHoHWork" />
           <meta name="twitter:image:src" content="/static/logo/250px.png" />
 
-          {/* <link rel='stylesheet' href='/static/css/main.css' />
-          <link rel='stylesheet' href='/static/css/index.css' /> */}
+          <link rel="stylesheet" href="/static/css/index.css" />
         </Head>
 
-        <Layout>
-          <Content style={{ padding: "0 50px", marginTop: 64 }}>
-            <div style={{ background: "#fff", padding: 24, minHeight: 380 }}>
-              Content
+        <Layout
+          style={{
+            background: "url('/static/grated-bg.svg') top center repeat",
+            minHeight: "100vh"
+          }}
+        >
+          <Content
+            style={{
+              padding: "0 50px",
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)"
+            }}
+          >
+            <div style={{ padding: 24, minHeight: 380, textAlign: "center" }}>
+              <img
+                src="/static/wordmark_slate.svg"
+                style={{
+                  width: "500px",
+                  display: "inline-block",
+                  marginTop: "4vh"
+                }}
+              />
+              <p
+                style={{
+                  marginTop: "4vh",
+                  display: "block",
+                  fontWeight: "bold"
+                }}
+              >
+                Heya, Berkshires! Awesome things coming your way soon!
+              </p>
             </div>
           </Content>
         </Layout>
