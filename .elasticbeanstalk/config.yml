@@ -1,15 +1,14 @@
 branch-defaults:
   master:
-    environment: WHOHW
+    environment: whohw-stage
 environment-defaults:
-  WHOHW:
+  whohw-stage:
     branch: null
     repository: null
 global:
   application_name: WHoWH Temp
   default_ec2_keyname: null
-  default_platform:
-    arn:aws:elasticbeanstalk:us-east-2::platform/Node.js running on
+  default_platform: arn:aws:elasticbeanstalk:us-east-2::platform/Node.js running on
     64bit Amazon Linux/4.8.3
   default_region: us-east-2
   include_git_submodules: true
