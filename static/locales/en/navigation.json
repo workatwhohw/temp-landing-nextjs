@@ -1,0 +1,82 @@
+{
+  "top": {
+    "home": "Home",
+    "products": "Products",
+    "solutions": "Solutions",
+    "developers": "Developers",
+    "community": "Community",
+    "company": "Company",
+    "download": "Download"
+  },
+  "products": {
+    "rivet": "The Rivet",
+    "rivet_sub": "The hub for all your policies and keys.",
+    "wallet": "Rivetz Assured Wallet",
+    "wallet_sub": "Hardware key storage for your networked app!",
+    "authenticator": "Rivetz Authenticator",
+    "authenticator_sub": "A simpler & safer authentication experience.",
+    "chat": "Chat",
+    "chat_sub": "Your chat, powered by The Rivetz Network.",
+    "jarz": "Jarz",
+    "jarz_sub": "Multi-Asset payments powering The Rivetz Network.",
+    "confirm": "Confirm",
+    "confirm_sub": "Digital transactions with recorded intent."
+  },
+  "solutions": {
+    "policy": "Rivetz Policy Engine",
+    "policy_sub": "Customizable policies enforced on the endpoint.",
+    "auth": "Enterprise Authentication",
+    "auth_sub": "Simpler & safer authentication for employees.",
+    "collection": "Collection of Devices",
+    "collection_sub": "Friend, Group, and Manage device relationships.",
+    "drt": "Dual Roots of Trust",
+    "drt_sub": "Separate supply chains working together to protect your keys.",
+    "services": "Professional Services",
+    "services_sub": "Use our services to build custom Rivetz functionality.",
+    "wp": "Whitepapers & Product Sheets",
+    "wp-rvt": "RvT Token",
+    "wp-drt": "Dual Roots of Trust",
+    "wp-auth": "Authenticator",
+    "wp-toolkit": "Toolkit",
+    "wp-payments": "Payments",
+    "wp-confirm": "Confirm"
+  },
+  "developers": {
+    "docs": "The Rivetz Network Documentation",
+    "docs_sub": "Take the first step towards a simpler & safer future.",
+    "start": "Get Started",
+    "start-overview": "Overview",
+    "start-full": "Full Toolkit Reference",
+    "quick": "Quick Start Guides",
+    "quick-wallet": "Rivetz Assured Wallet",
+    "community": "Community & Support",
+    "community_sub": "Your chat, powered by The Rivetz Network."
+  },
+  "community": {
+    "head": "Rivetz Community Hub",
+    "sub": "Join us and see what is happening at Rivetz!",
+    "social": "Social Media"
+  },
+  "company": {
+    "mission": "Our Mission",
+    "history": "Company History",
+    "partner": "Partner Program",
+    "team": "Team",
+    "careers": "Careers",
+    "contact": "Contact Us",
+    "blog": "From the Blog"
+  },
+  "newsletter": {
+    "header": "Sign Up for Our Newsletter!",
+    "subscribe": "I agree to receive periodic email newsletters and updates from Rivetz Corp, Inc.",
+    "name": "Your Name",
+    "loading": "Submitting, just a sec...",
+    "requirements": "You must provide a valid email and your explicit consent in order to receive our newsletter!",
+    "already": "You've already subscribed to our newsletter, thanks!",
+    "email": "Email Address",
+    "button": "Sign Up",
+    "success": "Thanks! You're signed up for our newsletter!",
+    "fail": "Oops, there was an issue signing you up. Please try again - if the issue persists, contact our support."
+  },
+  "copyright": "All Rights Reserved."
+}

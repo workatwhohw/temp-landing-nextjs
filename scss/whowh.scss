@@ -1,0 +1,757 @@
+@charset "UTF-8";
+
+/*
+*****************
+* RivetzDEV Primary Styles
+* by Andrew Defee [@adefee]
+* for Rivetz, v: Etta
+* Last Updated 06.05.2019@12:36PM (1557160616)
+*
+* [Table of contents]
+* 1. Imports
+* 2. Global Settings 
+*
+*****************
+*/
+
+/*
+*
+* 1. Imports
+*
+*/
+// Remote Font Imports (Adobe TypeKit, Google Fonts, etc)
+//@import url('https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.6/css/uikit.min.css');
+// @import "third-party/font-awesome/fontawesome.scss";
+// @import "third-party/font-awesome/solid.scss";
+// @import "third-party/font-awesome/light.scss";
+// @import "third-party/font-awesome/regular.scss";
+// @import "third-party/font-awesome/brands.scss";
+
+// UIKit Var Overwrites
+$global-link-color: c(1);
+
+// 2. Import default variables and available mixins.
+// @import "../node_modules/uikit/src/scss/variables-theme.scss";
+// @import "../node_modules/uikit/src/scss/mixins-theme.scss";
+
+@import "variables"; // Custom Vars
+@import "bourbon"; // Bourbon
+
+// 3.Custom mixin overwrites for UIKit
+
+// 4. Import UIkit FInals
+// @import "../node_modules/uikit/src/scss/uikit-theme.scss";
+
+// Other imports
+@import "../node_modules/react-modal-video/scss/modal-video.scss"; // React Modal Video
+
+body {
+  min-height: 101vh;
+  overflow-x: hidden;
+  font-weight: 300;
+  width: 100% $imp;
+  background: c(bg);
+  color: c(text);
+  @include font(p);
+  font-size: 15px;
+}
+
+h1,
+h2,
+h3 {
+  @include font(header, 300);
+}
+
+em {
+  color: inherit;
+}
+
+.uk-label {
+  background: linear-gradient(90.09deg, #526292 11.74%, c(2) 87.47%), c(2);
+}
+
+#siteLogo {
+  position: relative;
+  width: 100%;
+
+  a {
+    position: relative;
+    display: block;
+    transition: all 0.2s linear;
+    height: 50px;
+    padding: 10px 0px;
+    img {
+      position: relative;
+      display: inline-block;
+      height: 100%;
+      width: auto;
+      vertical-align: top;
+    }
+    .logoText {
+      position: relative;
+      display: inline-block;
+      margin: 0 10px;
+      margin-right: 0;
+      color: c(1);
+      text-transform: uppercase;
+      padding: 2px;
+      span {
+        line-height: 30px;
+        @include font(tit);
+        font-weight: bold;
+        font-size: 2.4em;
+        display: block;
+        width: 100%;
+        margin: 0;
+        color: c(1);
+        &.textSmaller {
+          font-size: 0.8em;
+          font-weight: normal;
+          line-height: 12px;
+          padding-left: 2px;
+          color: c(2);
+        }
+      }
+    }
+    &:hover {
+      opacity: 0.8;
+      text-decoration: none;
+    }
+  }
+}
+
+// Mobile Nav
+#site-navigation-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 10px 10px;
+  background: c(bg, 1);
+  z-index: 100;
+
+  .logoCont {
+    text-align: left;
+
+    a {
+      display: inline-block;
+      position: relative;
+      padding: 0;
+      margin: 0;
+      vertical-align: top;
+      text-decoration: none;
+      transition: all 0.2s linear;
+
+      img {
+        position: relative;
+        height: 12vw;
+        width: auto;
+        display: block;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  .menu-toggle {
+    text-align: right;
+    padding: 0 20px;
+
+    a {
+      position: relative;
+      display: inline-block;
+      color: c(1);
+      font-size: 1.2rem;
+      height: 12vw;
+      width: 30px;
+      padding: 0;
+      margin: 0;
+      transition: all 0.2s linear;
+      text-decoration: none;
+
+      i,
+      svg {
+        position: absolute;
+        height: 12px;
+        width: 27px;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+// Mobile Nav (Off-Canvas)
+#site-navigation-offcanvas {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 150;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background: c(bg);
+  color: c(text);
+  padding: 0px 20px;
+  padding-right: 10px;
+
+  .site-navigation-offcanvas-inner {
+    position: relative;
+    display: block;
+    font-size: 2.6rem;
+    text-align: right;
+    padding: 0px 20px;
+    padding-left: 40px;
+    width: 100%;
+  }
+
+  #site-navigation-close {
+    position: relative;
+    display: inline-block;
+    padding: 0px 40px;
+    height: 12vw;
+    font-size: 2.6rem;
+    text-align: right;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: c(text);
+
+    i,
+    svg {
+      position: relative;
+      transition: all 0.1s linear;
+
+      &:hover {
+        color: c(1);
+      }
+    }
+  }
+
+  .mobile-nav-position {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  ul.mobile-nav {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+
+    li {
+      position: relative;
+      display: block;
+      margin: 40px auto;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        position: relative;
+        display: block;
+        color: c(text);
+        transition: all 0.1s linear;
+        @include font(2, 600);
+        text-transform: uppercase;
+        font-size: 1.55rem;
+        text-align: left;
+        padding: 0 2vw;
+
+        .nav-inner {
+          position: relative;
+          display: inline-block;
+          text-align: left;
+
+          .nav-icon {
+            position: relative;
+            display: inline-block;
+            margin-right: 25px;
+            width: 50px;
+            text-align: center;
+
+            i,
+            svg {
+              position: relative;
+              display: inline-block;
+              top: -2px;
+              transform: scale(1.15);
+              transition: all 0.1s linear;
+              path {
+                transition: all 0.1s linear;
+              }
+            }
+          }
+
+          span {
+            position: relative;
+          }
+        }
+
+        &:hover,
+        &:active {
+          color: c(1);
+
+          i,
+          svg {
+            path {
+              fill: c(1);
+            }
+            fill: c(1);
+            color: c(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+ul.social-nav {
+  position: relative;
+  text-align: center;
+  list-style: none;
+  display: block;
+  padding: 0 10vw;
+  margin-top: 8vh;
+
+  li {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+
+    a {
+      position: relative;
+      display: block;
+      background: c(1);
+      color: c(white);
+      padding: 7px 5px;
+      border-radius: $bRadius;
+      font-size: 30px;
+      line-height: 20px;
+      transition: all 0.1s ease-in-out;
+
+      i,
+      svg {
+        position: relative;
+        margin: 0;
+      }
+
+      &:hover {
+        @include box-shadow(normal);
+        top: -1px;
+      }
+    }
+  }
+}
+
+.link-underline {
+  position: relative;
+  display: inline-block;
+  top: -2px;
+  color: c(1, 0.8);
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  font-weight: bold;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    background: c(1, 0.8);
+    height: 2px;
+    border-radius: 2px;
+    transition-property: left, right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  &:active:before,
+  &:focus:before,
+  &:hover:before {
+    left: 0;
+    right: 0;
+  }
+
+  i,
+  svg {
+    position: relative;
+    margin-right: 5px;
+    top: 1px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: c(1, 0.8);
+  }
+}
+
+/*
+ * Footer
+ * Sits bottom of all Generic pages
+ ************
+ *
+*/
+footer,
+#footer {
+  position: relative;
+  background: c(text);
+  color: c(white);
+  padding: 0;
+  margin-top: 4vh;
+  vertical-align: middle;
+
+  .newsletter {
+    background: c(1);
+    color: c(white);
+    @include font(p);
+    position: relative;
+
+    h4 {
+      @include font(subheader);
+      font-size: 2rem;
+      color: c(white);
+      text-align: center;
+      text-transform: uppercase;
+      padding: 5vh 40px;
+      padding-bottom: 2vh;
+    }
+
+    .newsletter-error {
+      position: relative;
+      display: block;
+      text-align: center;
+      font-size: 1rem;
+      padding: 20px 10vw;
+      padding-top: 0;
+      color: c(white);
+      @include font(p);
+    }
+
+    .newsletter-email {
+      position: relative;
+      text-align: center;
+      padding: 0 10vw;
+
+      .uk-inline {
+        width: 100%;
+
+        &.marBot {
+          margin-bottom: 2vh;
+        }
+
+        .uk-form-icon {
+          text-align: left;
+          color: c(white);
+          width: 80px;
+
+          i,
+          svg {
+            width: 30px;
+          }
+        }
+
+        input {
+          text-align: left;
+          background: c(white, 0.4);
+          font-size: (1.8rem);
+          color: c(white);
+          @include font(p, 300);
+          padding: 40px 2vw;
+          padding-left: 80px $imp;
+          padding-bottom: 36px;
+          outline: 0;
+          border: none;
+          border-radius: $bRadius;
+          transition: all 0.1s ease-in-out;
+
+          &::placeholder {
+            color: c(white);
+            font-weight: normal $imp;
+            text-transform: uppercase $imp;
+          }
+          &:-ms-input-placeholder {
+            color: c(white);
+            font-weight: normal $imp;
+            text-transform: uppercase $imp;
+          }
+          &::-ms-input-placeholder {
+            color: c(white);
+            font-weight: normal $imp;
+            text-transform: uppercase $imp;
+          }
+
+          &:focus,
+          &:active {
+            font-weight: bold;
+            @include box-shadow(normal);
+          }
+        }
+      }
+    }
+
+    .newsletter-consent {
+      position: relative;
+      text-align: center;
+      padding: 0 10vw;
+      margin-top: 2vh;
+
+      label {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        text-align: left;
+
+        span {
+          display: inline-block;
+          text-align: left;
+          width: 86%;
+          @include font(p, 100);
+          font-size: 1.26rem;
+          line-height: 1.2;
+          vertical-align: top;
+        }
+
+        .inputCont {
+          display: inline-block;
+          position: relative;
+          text-align: center;
+          height: 50px;
+          width: 10%;
+          vertical-align: top;
+
+          input {
+            // Checkbox
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 3px;
+            background-color: c(white);
+            border: none;
+            outline: 0;
+            transition: all 0.1s ease-in-out;
+
+            &:checked {
+              background-color: c(2);
+            }
+
+            &:hover {
+              @include box-shadow(normal);
+            }
+          }
+        }
+      }
+    }
+
+    .newsletter-submit {
+      position: relative;
+      text-align: center;
+      padding-bottom: 4vh;
+      display: block;
+
+      #newsletter-submit {
+        position: relative;
+        @include font(subheader);
+        font-size: 1.8rem;
+        background: c(white);
+        color: c(1);
+        text-align: center;
+        text-transform: uppercase;
+        padding: 12px 24px;
+        display: inline-block;
+        border-radius: $bRadius;
+        margin: 0 auto;
+        line-height: 1;
+        padding-top: 18px;
+        cursor: pointer;
+        transition: all 0.2s linear;
+
+        &:hover {
+          background: c(2);
+          color: c(white);
+          @include box-shadow(normal);
+        }
+      }
+    }
+
+    .newsletter-loading,
+    .newsletter-success {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: c(1);
+      z-index: 20;
+      display: block;
+
+      &.newsletter-success {
+        z-index: 25;
+      }
+
+      span,
+      .success-msg {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: c(white);
+        text-align: center;
+        text-transform: uppercase;
+
+        i,
+        svg {
+          position: relative;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .footerContent {
+    padding: 0 4vw;
+    position: relative;
+
+    & > .uk-container-fluid {
+      margin: 0;
+    }
+
+    .social-nav {
+      margin-bottom: 8vh;
+      padding: 0 4vw;
+    }
+
+    h5 {
+      color: c(white);
+      @include font(subheader);
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      margin: 0;
+
+      &.community {
+        color: c(1);
+      }
+    }
+
+    .footerNav {
+      position: relative;
+      padding: 0;
+      list-style: none;
+      margin: 0;
+      margin-bottom: 3vh;
+
+      li {
+        position: relative;
+        display: block;
+        margin: 10px 0;
+
+        a {
+          position: relative;
+          display: block;
+          color: c(white);
+          transition: all 0.1s linear;
+          @include font(subheader, normal);
+
+          &:hover {
+            color: c(1);
+            text-decoration: none $imp;
+          }
+
+          &.community {
+            color: c(1);
+            @include font(subheader);
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            margin: 0;
+            vertical-align: top;
+
+            &:hover {
+              color: c(white);
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    a h5.community {
+      margin-bottom: 3vh;
+      top: -2px;
+      position: relative;
+
+      &:hover {
+        text-decoration: none $imp;
+      }
+    }
+  }
+
+  .copyright {
+    position: relative;
+    @include font(header, 100);
+    color: c(white);
+    font-size: 1rem;
+    text-transform: none;
+    text-align: center;
+    padding: 2vh 4vw;
+
+    p {
+      position: relative;
+      margin: 0 auto;
+
+      a {
+        color: c(white);
+        top: -1px;
+
+        &:hover {
+          color: c(white);
+        }
+
+        &:after,
+        &:before {
+          background: c(white);
+        }
+      }
+    }
+  }
+}
+
+/*
+ * Responsive Changes: 640px (@s) and up
+ ************
+ *
+*/
+@media (min-width: 640px) {
+  // #site-navigation-mobile {
+  //   top: 36px;
+  //   padding: 20px 0;
+  // }
+}
+
+/*
+ * Responsive Changes: 960px (@m) and up
+ ************
+ *
+*/
+@media (min-width: 960px) {
+}

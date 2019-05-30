@@ -1,0 +1,29 @@
+{
+  "logo-first": "Working Hard",
+  "logo-last": "Or Hardly Working",
+  "logo-mark": "WHoHW",
+  "site-slogan": "",
+  "site-description": "",
+  "change-locale": "Change Site Locale",
+  "see-more": "See More",
+  "more": "More",
+  "back": "Back",
+  "prev": "Previous",
+  "next": "Next",
+  "open": "Open",
+  "close": "Close",
+  "logo": "Logo",
+  "image": "Image",
+  "topnav": {
+    "home": "Home",
+    "locations": "Locations",
+    "about": "About",
+    "workspace": "Workspace",
+    "members": "Members",
+    "founders": "Founders",
+    "contact": "Contact Us",
+    "investors": "Investors"
+  },
+  "error-with-status": "Oops! That's a {{statusCode}} error! We'll have this all back up soon!",
+  "error-without-status": "An unknown error occurred on the server."
+}

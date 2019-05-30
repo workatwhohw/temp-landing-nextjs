@@ -1,0 +1,176 @@
+@charset "UTF-8";
+
+/*
+*****************
+* Theme Variables
+* by Andrew Defee [@adefee]
+* for Rivetz, v: Etta
+* Last Updated 06.05.2019@12:36PM (1557160602)
+*
+* [Table of contents]
+* 1. Font Imports
+* 2. Font Families
+* 2. Font Colors
+* 3. Global Settings 
+*
+*****************
+*/
+
+/*
+*
+* 1. Font Imports
+*
+*/
+// Remote Font Imports (Adobe TypeKit, Google Fonts, etc)
+@import url("https://fonts.googleapis.com/css?family=Catamaran:100,400,700|Comfortaa:700&subset=latin-ext");
+
+/*
+*
+* 2. Font Families
+*
+*   1 (Header): "Comfortaa" (@700), via Google Fonts. Used for primary headers and occasional emphasis.
+*   2 (Subheader): "Catamaran" (@700), via Google Fonts. uses for subtitles and emphasis
+*   3 (P): "Catamaran" (@400), via Google Fonts. Paragraphs and normal text.
+*
+*   Error for testing: "Times New Roman" red bold.
+*/
+@mixin font($fontFamily: 1, $fontWeight: "") {
+  @if $fontFamily == 1 or $fontFamily == header {
+    font-family: "Comfortaa", cursive;
+    @if $fontWeight != "" {
+      font-weight: $fontWeight;
+    } @else {
+      font-weight: bold;
+    }
+  } @else if $fontFamily == 2 or $fontFamily == subheader {
+    font-family: "Catamaran", sans-serif;
+    @if $fontWeight != "" {
+      font-weight: $fontWeight;
+    } @else {
+      font-weight: bold;
+    }
+  } @else if $fontFamily == 3 or $fontFamily == p {
+    font-family: "Catamaran", sans-serif;
+    @if $fontWeight != "" {
+      font-weight: $fontWeight;
+    } @else {
+      font-weight: 400;
+    }
+  } @else if $fontFamily == fa {
+    font-family: "FontAwesome";
+  } @else {
+    // Make unsupported styles stand out
+    font-family: "Times New Roman", serif;
+    font-weight: bold !important;
+    color: red !important;
+    background: rgba(255, 192, 203, 0.6) !important;
+  }
+}
+
+/*
+*
+*   3. Font Colors
+*
+*   1 (Primary): #d66e4a, rgb(214, 110, 74) // Orange
+*   2 (Secondary): #060613, rgb(6, 6, 19), // Dark blue
+*   GM-Blue: #1a2933, rgb(26, 41, 51) // Old GameMule Blue
+*   White: #ffffff, rgb(255,255,255)
+*   Off-White: #f1f1f1, rgb(241,241,241)
+*   Grey: #a4b1b2, rgb(164,177,178)
+*   Dark: #0f171c, rgb(15,23,28)
+* 
+*/
+$themeColors-map: (
+  1: #3f53b9,
+  // Primary Blue
+    2: #2d2a38,
+  // Primary Shale
+    sand: #faefdb,
+  white: #ffffff,
+  bg: #f7f8fc,
+  text: #4f4f4f,
+  black: #000000
+);
+
+@function c($key: 1, $transparency: 1) {
+  @if map-has-key($themeColors-map, $key) {
+    @return rgba(map-get($themeColors-map, $key), $transparency);
+  } @else {
+    @return #ff1493;
+  }
+}
+
+/*
+*
+* 4. Global Options
+*
+*/
+
+// Globals
+$imp: !important;
+
+// Border
+//$bRadius: 5px;
+$bRadius: 5px;
+
+// Box Shadows
+$themeBoxShadows-map: (
+  normal: 3px 10px 19px rgba(0, 0, 0, 0.29)
+);
+
+@mixin box-shadow($key: theme) {
+  box-shadow: map-get($themeBoxShadows-map, $key);
+}
+
+// Transitions
+$themeTransitions-map: (
+  normal: all 0.2s linear,
+  ease: all 0.2s ease-in-out
+);
+@mixin trans($key: normal) {
+  transition: map-get($themeTransitions-map, $key);
+}
+
+/*
+*
+* DEPRECATED: Old Theme Colors
+*
+*/
+@function tc-old($colorTier: 1, $transparency: 1) {
+  @if $colorTier == 1 or $colorTier == orange {
+    // Theme orange
+    // rgba(214, 110, 74, 1), hex #d66e4a
+    @return rgba(214, 110, 74, $transparency);
+  } @else if $colorTier == 2 or $colorTier == blue {
+    // Theme dark blue
+    // rgba(26, 41, 51, 1), hex #1a2933
+    @return rgba(26, 41, 51, $transparency);
+  } @else if $colorTier == 3 or $colorTier == grey {
+    // Theme grey (lighter)
+    // rgba(101, 106, 109, 1), hex #656a6d
+    @return rgba(101, 106, 109, $transparency);
+  } @else if $colorTier == 3 or $colorTier == white {
+    // Generic White
+    // rgba(255, 255, 255, 1)
+    @return rgba(255, 255, 255, $transparency);
+  } @else if $colorTier == 4 or $colorTier == dark {
+    // Theme UI dark blue (darker, shale)
+    // rgba(15, 23, 28, 1)
+    @return rgba(15, 23, 28, $transparency);
+  } @else if $colorTier == 5 or $colorTier == bg {
+    // Theme dark blue/violet
+    // rgba(7, 10, 20, 1), hex #070a14
+    @return rgba(6, 6, 19, $transparency);
+  } @else if $colorTier == red {
+    // Theme red (for alerts, etc)
+    // rgba(214, 74, 74, 1), hex #d64a4a
+    @return rgba(214, 74, 74, $transparency);
+  } @else if $colorTier == green {
+    // Theme green (alt. notifications)
+    // rgba(43, 148, 119, 1), hex #2b8a77
+    @return rgba(43, 148, 119, $transparency);
+  } @else {
+    // When in doubt, return white
+    @return rgba(255, 255, 255, 1);
+  }
+}
