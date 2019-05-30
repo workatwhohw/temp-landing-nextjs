@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "next build && node server.js",
     "build": "next build",
-    "start": "next build && next start -p $PORT",
+    "start": "next build && node server.js",
     "prod": "next build && node server.js",
     "maiden": "next build && node server.js"
   },
