@@ -10,9 +10,9 @@
   "scripts": {
     "dev": "next build && node server.js",
     "build": "next build",
-    "start": "next build && node server.js",
+    "start": "next build && next start -p $PORT",
     "prod": "next build && node server.js",
-    "maiden": "next build && node server.js"
+    "maiden": "npm i && next build && node server.js"
   },
   "keywords": [],
   "author": "adefee",
