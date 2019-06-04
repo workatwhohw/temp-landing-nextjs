@@ -4,8 +4,12 @@
   "description": "UWA for main WHoHW. Built on Node, Express, NextJS, React, and SCSS as part of our 'Annette'-class dev cycle.",
   "homepage": "https://whohw.com",
   "contributors": [
-    "Andrew Defee <adefee@rivetz.com> (@adefee)"
+    "Andrew Defee <andrew@workatwhohw.com> (@adefee)"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/workatwhohw/temp-landing-nextjs.git"
+  },
   "main": "server.js",
   "scripts": {
     "dev": "next build && node server.js",
@@ -19,12 +23,12 @@
   "license": "WHOHW",
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.4",
-    "@fortawesome/fontawesome-svg-core": "^1.2.18",
-    "@fortawesome/free-brands-svg-icons": "^5.8.2",
-    "@fortawesome/pro-light-svg-icons": "^5.8.2",
-    "@fortawesome/pro-regular-svg-icons": "^5.8.2",
-    "@fortawesome/pro-solid-svg-icons": "^5.8.2",
-    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@fortawesome/fontawesome-svg-core": "latest",
+    "@fortawesome/free-brands-svg-icons": "latest",
+    "@fortawesome/pro-light-svg-icons": "latest",
+    "@fortawesome/pro-regular-svg-icons": "latest",
+    "@fortawesome/pro-solid-svg-icons": "latest",
+    "@fortawesome/react-fontawesome": "latest",
     "@zeit/next-css": "^1.0.1",
     "antd": "^3.19.1",
     "axios": ">=0.19.0",
