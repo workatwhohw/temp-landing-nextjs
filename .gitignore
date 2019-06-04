@@ -1,6 +1,7 @@
 .ebextensions-hide/
 node_modules/
 .next
+.env
 *.log
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
