@@ -74,6 +74,7 @@ class Home extends React.Component {
                   display: "inline-block",
                   marginTop: "4vh"
                 }}
+                alt="WHoHW Workmark"
               />
               <p
                 style={{
