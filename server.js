@@ -11,7 +11,7 @@ const { parse } = require("url")
 const mobxReact = require("mobx-react")
 
 const dev = process.env.NODE_ENV !== "production"
-const disableSSLCheck = process.env.DISABLE_SSL == true
+const disableSSLCheck = (process.env.DISABLE_SSL ? process.env.DISABLE_SSL : false)
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
@@ -37,7 +37,7 @@ app
       res.redirect('https://' + req.headers.host + req.url)
     }
 
-    server.all("*", forceSSL)
+    if (!disableSSLCheck) server.all("*", forceSSL)
 
     /**
      * Routes
