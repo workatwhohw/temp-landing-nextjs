@@ -44,8 +44,7 @@ export default () => (
       />
       <meta name="theme-color" content="#ffffff" />
 
-      <link rel="stylesheet" href="/static/css/antd.min.css" />
-      <link rel="stylesheet" href="/static/css/whowh.css" />
+      <link rel="stylesheet" href="/static/css/whowh.css" media="all" />
 
     </Head>
     {/* eslint-enable */}

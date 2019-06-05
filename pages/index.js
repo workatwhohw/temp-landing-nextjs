@@ -47,7 +47,7 @@ class Home extends React.Component {
           <meta name="twitter:site" content="@WHoHWork" />
           <meta name="twitter:image:src" content="/static/logo/250px.png" />
 
-          <link rel="stylesheet" href="/static/css/index.css" />
+          {/* <link rel="stylesheet" href="/static/css/index.css" media="all" /> */}
         </Head>
 
         <Layout
