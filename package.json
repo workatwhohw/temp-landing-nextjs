@@ -2,7 +2,7 @@
   "name": "whohw-annette-next",
   "version": "0.0.1",
   "description": "UWA for main WHoHW. Built on Node, Express, NextJS, React, and SCSS as part of our 'Annette'-class dev cycle.",
-  "homepage": "https://whohw.com",
+  "homepage": "https://workatwhohw.com",
   "contributors": [
     "Andrew Defee <andrew@workatwhohw.com> (@adefee)"
   ],
@@ -19,7 +19,8 @@
   },
   "keywords": [],
   "author": "adefee",
-  "license": "WHOHW",
+  "license": "UNLICENSED",
+  "private": true,
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.4",
     "@fortawesome/fontawesome-svg-core": "latest",
