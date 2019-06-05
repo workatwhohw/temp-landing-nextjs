@@ -54,10 +54,7 @@ body {
   color: c(text);
   @include font(p);
   font-size: 15px;
-
-  .ant-layout {
-    background: none;
-  }
+  overflow-x: hidden; 
 }
 
 h1,

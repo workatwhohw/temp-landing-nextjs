@@ -347,9 +347,8 @@ body {
   color: #4f4f4f;
   font-family: "Catamaran", sans-serif;
   font-weight: 400;
-  font-size: 15px; }
-  body .ant-layout {
-    background: none; }
+  font-size: 15px;
+  overflow-x: hidden; }
 
 h1,
 h2,
