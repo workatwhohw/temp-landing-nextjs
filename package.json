@@ -14,9 +14,8 @@
   "scripts": {
     "dev": "next build && node server.js",
     "build": "next build",
-    "start": "next build && next start -p $PORT",
-    "prod": "next build && node server.js",
-    "maiden": "npm i && next build && node server.js"
+    "start": "npm i && next build && node server.js",
+    "prod": "next build && node server.js"
   },
   "keywords": [],
   "author": "adefee",
