@@ -81,7 +81,7 @@ class Home extends React.Component {
                   fontWeight: "bold"
                 }}
               >
-                Heya, Berkshires! Awesome things coming your way soon!
+                Heya, Berkshires! There are awesome things coming your way soon!
               </p>
             </div>
           </Content>
