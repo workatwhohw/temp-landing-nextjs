@@ -5,6 +5,7 @@ export default () => (
     {/* eslint-disable */}
     <Head>
       <meta name="image" content="/static/img/logo/250px.png" />
+      <meta name="description" content="Community-focused and event-driven collaborative environment and coworking for the modern entrepreneur whose work isn't limited to metropolitan areas." />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
       <link rel="apple-touch-icon" sizes="180x180" href="/static/img/icons/apple-touch-icon.png?v=1559704979" />
