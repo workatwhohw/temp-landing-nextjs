@@ -46,6 +46,7 @@ export default () => (
 
       <link rel="stylesheet" href="/static/css/antd.min.css" />
       <link rel="stylesheet" href="/static/css/whowh.css" />
+
     </Head>
     {/* eslint-enable */}
   </div>
