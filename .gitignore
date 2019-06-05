@@ -3,6 +3,7 @@ node_modules/
 .next
 .env
 *.log
+.npmrc
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/config.yml
