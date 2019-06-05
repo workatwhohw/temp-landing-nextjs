@@ -70,6 +70,7 @@ class Home extends React.Component {
                 src="/static/wordmark_slate.svg"
                 style={{
                   width: "500px",
+                  maxWidth: "80vw",
                   display: "inline-block",
                   marginTop: "4vh"
                 }}
