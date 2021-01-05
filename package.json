@@ -31,7 +31,7 @@
     "@fortawesome/react-fontawesome": "latest",
     "@zeit/next-css": "^1.0.1",
     "antd": "^3.19.1",
-    "axios": ">=0.19.0",
+    "axios": ">=0.21.1",
     "babel-plugin-import": "^1.11.2",
     "dotenv": "^8.0.0",
     "express": "^4.17.0",
